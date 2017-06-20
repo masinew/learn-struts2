@@ -43,6 +43,13 @@
         	<result name="none">/register.jsp</result>
         	<result name="input">/register.jsp</result>
         </action>
+		<action name="edit" class="action.EditAction" method="input">
+			<result name="input">/edit.jsp</result>
+		</action>
+		<action name="save" class="action.EditAction" method="execute">
+			<result name="input">/edit.jsp</result>
+			<result name="success">/thankyou2.jsp</result>
+		</action>
     </package>
 
 </struts>
