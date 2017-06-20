@@ -22,5 +22,6 @@
 	</s:form>
 	
 	<p><a href="<s:url action="register" />">Please register</a> for our prize drawing.</p>
+	<a href='<s:url action="index" namespace="config-browser" />'>Launch the configuration browser</a>
   </body>
 </html>

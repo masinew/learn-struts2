@@ -2,15 +2,15 @@ package action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import model.Person;
+import model.PersonOld;
 
 public class RegisterAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
-	private Person personBean;
+	private PersonOld personOldBean;
 	
 	@Override
 	public String execute() throws Exception {
-		if (personBean == null) {
+		if (personOldBean == null) {
 			return NONE;
 		}
 		
@@ -19,21 +19,21 @@ public class RegisterAction extends ActionSupport {
 	
 	@Override
 	public void validate() {
-		if (personBean != null) {
-			if (personBean.getFirstName().length() == 0) {
+		if (personOldBean != null) {
+			if (personOldBean.getFirstName().length() == 0) {
 				addFieldError("personBean.firstName", "Required First Name.");
 			}
-			if (personBean.getAge() <= 18) {
+			if (personOldBean.getAge() <= 18) {
 				addFieldError("personBean.age", "User's age must more than 18.");
 			}
 		}
 	}
 	
-	public void setPersonBean(Person personBean) {
-		this.personBean = personBean;
+	public void setPersonOldBean(PersonOld personBean) {
+		this.personOldBean = personBean;
 	}
 	
-	public Person getPersonBean() {
-		return personBean;
+	public PersonOld getPersonOldBean() {
+		return personOldBean;
 	}
 }

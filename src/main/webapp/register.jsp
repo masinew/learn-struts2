@@ -11,10 +11,10 @@
     <h3>Register for a prize by completing this form.</h3>
 
     <s:form action="register" method="post">
-      <s:textfield key="personBean.firstName" />
-      <s:textfield key="personBean.lastName" />
-      <s:textfield key="personBean.email" />  
-      <s:textfield key="personBean.age" />
+      <s:textfield key="personOldBean.firstName" />
+      <s:textfield key="personOldBean.lastName" />
+      <s:textfield key="personOldBean.email" />
+      <s:textfield key="personOldBean.age" />
       <s:submit/>
     </s:form>	
   </body>

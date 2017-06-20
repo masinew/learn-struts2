@@ -3,14 +3,14 @@ package action;
 import com.opensymphony.xwork2.ActionSupport;
 
 import model.MessageStore;
-import model.Person;
+import model.PersonOld;
 
 public class HelloWorldAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private MessageStore messageStore;
 	private static int helloCount = 0;
 	private String userName;
-	private Person personBean;
+	private PersonOld personOldBean;
 	
 	@Override
 	public String execute() throws Exception {
@@ -40,11 +40,11 @@ public class HelloWorldAction extends ActionSupport {
 		return this.userName;
 	}
 	
-	public void setPersonBean(Person personBean) {
-		this.personBean = personBean;
+	public void setPersonOldBean(PersonOld personBean) {
+		this.personOldBean = personBean;
 	}
 	
-	public Person getPersonBean() {
-		return personBean;
+	public PersonOld getPersonOldBean() {
+		return personOldBean;
 	}
 }
